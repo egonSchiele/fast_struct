@@ -39,6 +39,3 @@ class FastStruct
     @hash.delete k
   end
 end
-
-s = FastStruct.new(:a => 1, :b => {:a => 2})
-p s.b.a
