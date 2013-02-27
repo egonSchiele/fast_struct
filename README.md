@@ -1,12 +1,18 @@
-# FastStruct : A very fast implementation of OpenStruct
+# FastStruct : A fast implementation of OpenStruct
+
+## Install
+
+    gem install fast_struct
 
 ## Usage
 
+```ruby
     require 'fast_struct'
     s = FastStruct.new(:foo => 1)
     s[:bar] = 2
 
     p s.foo, s[:foo], s.to_hash
+```
 
 ## Features
 
