@@ -6,8 +6,12 @@ class FastStruct
     end
   end
 
-  def method_missing _k, v=nil
-    return @hash[_k]
+  def method_missing k, v=nil
+    k_str = k.to_s
+    if k_str[-1].chr == "="
+      @hash[k_str[0, k_str.size - 1].to_sym] = v
+    end
+    return @hash[k]
   end
 
   def to_hash

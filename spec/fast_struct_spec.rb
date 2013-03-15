@@ -29,6 +29,12 @@ describe FastStruct do
     s['a'].should == 1
   end  
 
+  it "should allow non hash-type writes" do
+    s = FastStruct.new
+    s.a = 1
+    s.a.should == 1
+  end    
+
   it "should deep-wrap" do
     s = FastStruct.new(:a => {:b => 1})
     s.a.b.should == 1
