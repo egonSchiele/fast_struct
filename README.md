@@ -10,6 +10,7 @@
     require 'fast_struct'
     s = FastStruct.new(:foo => 1)
     s[:bar] = 2
+    s.baz = 3
 
     p s.foo, s[:foo], s.to_hash
 ```
